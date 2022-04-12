@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Drawing site</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="ADD AUTHOR INFORMATION">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/highlight/styles/tomorrow.css">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+       
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<style>
+			.vids {
+			display: block;
+			width: 550px; }
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1 class="header-heading">Drawing assessment</h1>
+			</div>
+			<div class="nav-bar">
+				<ul class="nav">
+					<li><a href="#S1">Sprint 1</a></li>
+				</ul>
+			</div>
+			<div class="content">
+
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h1>Brief</h1>
+				<p>For this project, I aim to create a drawing application that allows users to draw shapes, lines and
+					manage colours. The overall purpose of this application is to help educate young children on the
+					basics of geometry through various shapes, and encourage creativity in a child’s mind; giving them
+					the freedom to endlessly explore principles of composition and style. This should hopefully include
+					the simple features of a drawing application like shape, size and colour tools, which may lead to a
+					more advanced canvas where older children can continue to learn from new methods and ways of
+					thinking about creativity. Through the development of creativity at a young age, this will help to
+					advance mental growth in things such as problem-solving and new possibilities, while also helping
+					to gain an understanding of how a child thinks or feels.
+
+					<br>I intend to follow the agile process throughout the production of this project, as I believe
+					this method is best suited to achieve my ideal outcome successfully. I will also be using GitHub,
+					which is a website that can manage and store my entire project accordingly, including the project
+					backlog and projects for each sprint (which are important aspects of the agile process). GitHub can
+					also record and track each stage of working throughout the build, allowing access to previous
+					versions of my final project in case unpredicted situations were to occur.
+				</p>
+					<hr>
+
+
+    <!-- Heading levels -->
+<h4>Reference inspiration images</h4>
+				<img src="assets/img/inspo1.png" style="max-width: 30%;"  alt="">
+				<img src="assets/img/inspo2.png" alt="">
+				<br>
+<h2>Project Backlog</h2>
+				<video controls>
+					<source src="assets/vids/projectbacklog.mov">
+				</video>
+<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+    <h2 id="S1">Sprint One</h2>
+<p><b>Aim:</b> My aim for sprint one is to create a basic canvas with a grid, that follows the movement and
+acknowledges the boundaries of the mouse. On top of this, I aim to include a traceable guide that once released by
+the mouse, a permanent box is drawn.</p>
+
+<h3>Plan</h3>
+
+<h4>Sprint one board</h4>
+<img class="img-responsive" src="assets/img/sprint1board.png" alt="">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint1diagram.png" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+<p>Link to the Canvas Page</p>
+<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+<video class="vids" controls>
+	<source src="assets/vids/interactiveobject.mov">
+</video>
+						</div>
+					<div class="col">
+
+<p>In this video testing to the left, I am testing the boundaries on the mouse through console logging the class
+'InteractiveObject', which I have designed to tract the status of the mouse. It is shown in the video, that the
+mouse's movements (click, down and up) will only be recorded if the mouse is inside the canvas, this is because in
+the future of this project, the user should not be needing to draw or control elements outside canvas as that is the
+primary use for a canvas. It can also be seen that my grid class is successfully working in the background
+of the canvas and the canvas itself has been created without fault. So far, in these early stages I have been
+presented with no unexpected errors.</p>
+						</div>
+					</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+				<video class="vids" controls>
+					<source src="assets/vids/controlobject.mov">
+				</video>
+						</div>
+						<div class="col">
+<p>In this video test, I am testing the functionality of the draggable guide and the drawing of rectangles. As
+shown in the beginning of the video, as long as the mouse stays within the canvas. The draggable guide correctly
+follows the dragging of a users mouse to indicate to them where the box will be drawn and when released,
+the box also correctly follows the position of the draggable guide when released. While these aspects of my
+code do work accordingly, there are also some errors that occur. <br> Due to the fact that the mouse's actions are not
+recorded while outside the canvas, if the user was to press and hold the mouse inside the canvas, to then
+move the mouse outside the canvas without the mouse being released, a box cannot be drawn. So when the
+mouse returns to the canvas up, the guide still follows the mouse but no box is drawn. A similar thing occurs
+when the mouse has gone outside the canvas, to return down. Because the origin point where the mouse clicked
+down was not recorded, upon releasing the mouse inside the canvas, the box is drawn in an incorrect place and
+there is an absence of the draggable guide. Finally, due to the method I used to create the draggable guide,
+the sizing of the inner circle sometimes ends up not sizing correctly in relation to the outer box, which
+results in the circle to surpass the edges of the box.</p>
+							</div>
+					</div>
+<hr>
+ <h2>Sprint Review</h2>
+<p>In summary, this sprint has been fairly successful in terms of setting up the project for a large range of
+possibilities. I can track the relevant movements and position of the users mouse which is important for many
+aspects like drawing and selecting shapes and options. As of this sprint, the user can draw a coloured box
+with the assistance of the draggable guide inside the gridded canvas. While there were a few errors that I
+noticed to do with the user entering and exiting the mouse as well as with the draggable guide (which I
+discussed in detail in the testing), I intend to fix these errors in future sprints so the program is
+error-proof, which is something very important when dealing with the unexpected nature of children.</p>
+<hr>
+
+ <hr>
+<!-- Paragraphs -->
+<h3>Example code insert (don't do too much of this)</h3>
+<pre style="font-size: 1.5em;">
+<code class="javscript"> function inBoundsCheck(xM, yM, x, y, w, h){
+        if( xM > x && xM < x+w && yM > y && yM < y+h){
+            return true;
+        }else{
+            return false;
+        }
+    }</code>
+</pre>
+ 
+            <hr>
+               
+              
+
+					<!-- Lists -->
+					<h3>Unordered list</h3>
+					<p>Unordered lists are used to markup lists where list items do not require numbering.</p>
+					<ul>
+						<li>Ut wisi enim ad minim veniam</li>
+						<li>Quis nostrud exerci tation</li>
+						<li>Lamcorper suscipit lobortis nis</li>
+						<li>Ut aliquip ex ea commodo consequat</li>
+						<li>Duis autem vel eum iriure dolor</li>
+					</ul>
+					<hr>
+
+					<h3>Ordered list</h3>
+					<p>Ordered lists are used to markup lists where list items require numbering.</p>
+					<ol>
+						<li>Hendrerit in vulputate velit esse</li>
+						<li>Olestie consequat</li>
+						<li>Vel illum dolore eu feugiat</li>
+						<li>Nulla facilisis at vero eros</li>
+						<li>Accumsan et iusto odio</li>
+					</ol>
+					<hr>
+
+					<h3>Unstyled list</h3>
+					<p>You can make the list unstyled using the <code>list-unstyled</code> class.</p>
+					<ul class="list-unstyled">
+						<li>Ut wisi enim ad minim veniam</li>
+						<li>Quis nostrud exerci tation</li>
+						<li>Lamcorper suscipit lobortis nis</li>
+						<li>Ut aliquip ex ea commodo consequat</li>
+						<li>Duis autem vel eum iriure dolor</li>
+					</ul>
+					<hr>
+
+					<h3>Inline list</h3>
+					<p>You can make the list display inline using the <code>list-inline</code> class.</p>
+					<ul class="list-inline">
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+					</ul>
+					<hr>
+
+				
+
+					<h3>Buttons</h3>
+					<p>You can apply the <code>btn</code> class to any element that requires a button style.</p>
+					<p><a href="#" class="btn">Submit</a></p>
+					<hr>
+
+
+
+               
+            
+
+			
+			</div>
+			<div class="footer">
+				&copy; Copyright 2015
+			</div>
+		</div>
+	</body>
+</html>
