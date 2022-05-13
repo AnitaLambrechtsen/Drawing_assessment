@@ -33,6 +33,7 @@
 			<div class="nav-bar">
 				<ul class="nav">
 					<li><a href="#S1">Sprint 1</a></li>
+					<li><a href="#S2">Sprint 2</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -137,7 +138,76 @@ noticed to do with the user entering and exiting the mouse as well as with the d
 discussed in detail in the testing), I intend to fix these errors in future sprints so the program is
 error-proof, which is something very important when dealing with the unexpected nature of children.</p>
 <hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S2">Sprint Two</h2>
+				<p><b>Aim:</b> My aim for sprint two is to create two buttons that will allow the user to draw
+				either an ellipse shape with their mouse or a rectangle shape. I aim to have a working class
+				and function that will correctly draw and show a draggable guide for the ellipse, as well as
+				create a button class to manage these two possible options for drawing.</p>
 
+				<h3>Plan</h3>
+
+				<h4>Sprint two board</h4>
+				<img class="img-responsive" src="assets/img/sprint2board.png" alt="">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint2diagram.jpg" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<hr>
+				<h3>Testing</h3>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint2.mov">
+						</video>
+						<div class="col-container">
+							<div class="col">
+							<img src="assets/img/ellipse_guide.png" alt="">
+								</div>
+							<div class="col">
+								<code class="javscript"> getBoundary(x, y, w, h, x_m, y_m){
+									return x_m > x && x_m < x + w && y_m > y && y_m < y + h;</code>
+								</div>
+						</div>
+					</div>
+					<div class="col">
+
+						<p>In this video testing to the left, I am testing the functionality of sprint 2 and how
+						both my ellipse, guide and buttons work. As it can be seen, moving from drawing
+						rectangles to ellipses is manageable and works as intended for the user. It is a clear
+						for the user what the purpose of each button is and now the user has slightly
+						more variation in my drawing program. I had a small problem with the guide earlier on
+						in the sprint (as seen in the image below), where the circle was not drawing in the
+						correct position. Fortunately, this was only a very small mistake, as I quickly realised
+						that I had forgotten to divide my x+w and y+h values by two, so the circle guide would
+						correctly draw where the mouse was clicked. Aside from this, this sprint ran fairly
+						smoothly as I was able to add the ellipse class and function, to be ran dependant on
+						the status of the InteractiveButton class, which I created for the purpose of selectable
+						buttons. I have also included a few lines of code that I have used for the boundaries
+						for the button class. This was important to get right so the buttons work as desired. At
+						the end of the video it is shown how the same issue with the rectangles and the user
+						leaving the canvas also occurs when the user draws an ellipse. While I clearly have not
+						fixed this error in this sprint, I still aim to improve this in future sprints so my
+						program is error free and able to be used by a user seamlessly. </p>
+					</div>
+				</div>
+				<hr>
+				<h2>Sprint Review</h2>
+				<p>In the end, this sprint was completed as expected and there were no major errors that I faced
+				while building it. I successfully created an ellipse function and class so the user can draw
+				ellipses at this current stage. Pairing with this, the draggable guide for the ellipse also
+				is working without any remaining errors. I am satisfied with how the InteractiveButton class
+				functions as the boundaries and task that each button is set to do, is completed in the
+				intended way. I think this base class should work well for the future of this project,
+				especially as most sprints aims are to include a new feature to the drawing project, each
+				that should have a different button to be able to use it. All the current issues are ones
+				that I addressed in sprint 1, as the same thing occurs when drawing ellipses if the user
+				enters and exits the canvas, which should be something I will fix in a future sprint.</p>
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+<hr>
+<hr>
  <hr>
 <!-- Paragraphs -->
 <h3>Example code insert (don't do too much of this)</h3>
