@@ -34,6 +34,7 @@
 				<ul class="nav">
 					<li><a href="#S1">Sprint 1</a></li>
 					<li><a href="#S2">Sprint 2</a></li>
+					<li><a href="#S3">Sprint 3</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -206,8 +207,73 @@ error-proof, which is something very important when dealing with the unexpected 
 				enters and exits the canvas, which should be something I will fix in a future sprint.</p>
 				<hr>
 <!--------------------------------------------------------------------------------------------------------------------->
-<hr>
-<hr>
+				<h2 id="S3">Sprint Three</h2>
+				<p><b>Aim:</b> My aim for sprint three is to create a colour swatch that consists of the
+				colours and ranging opacities for each one in my colour array (colArray). With this, the
+				user should be able to select the colour of the shapes drawn from a clearly presented group
+				of colours</p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint three board</h4>
+				<img class="img-responsive" src="assets/img/sprint3board.png" alt="">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint3diagram.jpg" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/sprint3_colours.png" alt="">
+						</div>
+					<div class="col">
+						<p>The image to the right, I am testing if the swatch's layout prints correctly. There
+						are many ways that a swatch can be printed out and displayed for a user. I
+						wanted to be sure whilst designing this feature, that it was not overwhelming to the
+						user (minimalist) and that it was printed in a way that would be recognisable to
+						the user as a colour swatch, without any written indication. To print the swatch,
+						I created an array called swatch_set, so I could loop through the colour array
+						that contains my colour palette, with the varying opacities on a new line.
+						Using this method of printing my swatch out complies with the relevant implication
+						of future proofing. This is because I can easily add more colours and/or opacities that
+						will be looped through and added to the swatch. </p>
+						</div>
+					</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint3.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>In the video to the right, I am testing if my main swatch function works how
+						intended. This would be when a colour and opacity is selected, the object is drawn with
+						the correct properties. My swatch class is very similar to my interactive object
+						class. The few key differences is that a text variable is not required, and
+						instead of the fill colour changing while hovering over or selecting the button,
+						the outline colour is what changes. It was necessary to have the outline change
+						colour because the colour is what the user is selecting. From here, I ran the
+						swatch through the loop that I have already created. As you can see in the video,
+						the colour and opacity will correctly change for both shapes when a particular
+						button in the swatch is selected, meaning that the implementation of this
+						component went smoothly. </p>
+					</div>
+				</div>
+				<h2>Sprint Review</h2>
+				<p>In summary, this sprint worked accordingly and no impactful errors occurred while I was
+					building each component. While considering the aesthetics and recognisability of my
+				swatch, I was able to print my intended design successfully with a loop through both
+					arrays. On top of this, I was able to then create a swatch class successfully and
+				make each unique colour and opacity into a button that the user is able to select
+				and change the colours of shapes. I believe that this was an important step to
+				follow through the principles of agile, as an essential aspect of a drawing function
+				is the option to change the colour of items. I am satisfied with how this sprint
+				went and no unexpected errors occurred.</p>
+<!--------------------------------------------------------------------------------------------------------------------->
+ <hr>
  <hr>
 <!-- Paragraphs -->
 <h3>Example code insert (don't do too much of this)</h3>
