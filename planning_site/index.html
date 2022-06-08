@@ -35,6 +35,7 @@
 					<li><a href="#S1">Sprint 1</a></li>
 					<li><a href="#S2">Sprint 2</a></li>
 					<li><a href="#S3">Sprint 3</a></li>
+					<li><a href="#S4">Sprint 4</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -272,6 +273,135 @@ error-proof, which is something very important when dealing with the unexpected 
 				follow through the principles of agile, as an essential aspect of a drawing function
 				is the option to change the colour of items. I am satisfied with how this sprint
 				went and no unexpected errors occurred.</p>
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S4">Sprint Four</h2>
+				<p><b>Aim:</b> My aim for sprint four is to add two new shape options to widen the
+				drawing possibilities for users with a triangle and line option. As well as this, I
+				also want to implement a clear canvas, undo and redo option for shapes that have
+				been drawn. </p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint four board</h4>
+				<img class="img-responsive" src="assets/img/sprint4board.png" alt="">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint4diagram.jpg" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/sprint4_tri.png" alt="">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp1.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As can be seen in the first testing image to the left, I was successfully
+						able to create a triangle class and function. This class and function did
+						correctly make a triangle, although I found it difficult to work out the
+						correct point values for an isosceles triangle. The triangle in the image
+						is one of my many attempts to assign the correct values for the object. <br>
+						As well as this, I also wanted to create a line tool, where the user can
+						draw a line that spans from the mouse down point to the release point.
+						This was not difficult to create a new button for, and due to the agile
+						process, I will embellish this option in future sprints. As seen in the video
+						to the left, I managed to successfully work out what the correct variables
+						were to print the triangle as intended, and the line is also working
+						accordingly. Both new objects can also have their colour and/or opacity
+						adjusted, with option bar that can be easily switched between. </p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For the second component that was implemented in this sprint, I added in
+						a clear canvas option. To do this, when the button is clicked, the
+						object array is set back to zero. When this occurs, all items that have been drawn on the
+						canvas will be removed so the user can now create new drawings and/or
+						clear a cluttered canvas. When adding this feature, there was no unexpected
+						errors that occurred during the process.</p>
+					</div>
+				</div>
+				<h4>-Component test 3-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp3.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp3fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>To create an undo option, I popped the last object that was drawn in
+						the object array. As you can see in the first video to the left in this
+						component, the undo button worked fairly well, as only one object would
+						be removed once the undo button was properly clicked on. An unintended
+						error occurred that I was quickly reminded of when building this button,
+						of which there are no boundaries on the clickable buttons located within
+						the canvas boundary. Due to this, as can be seen in the console log, when
+						the undo button is selected to undo, a new object will be formed to
+						remove from the object array. This is why the undo button needed to be
+						clicked twice before a noticeable object was removed from the canvas. To
+						fix this error, I set a new variable to the width and height of the canvas
+						without the buttons, so a new shape can only be drawn within those set
+						values to resolve this error. Due to the fact that I am following the
+						agile process, I implemented the easiest way to boundary check, which
+						will be later improved so manual measurements do not need to be assigned
+						particular values. <br>As shown in the video below this one in the
+						component test, upon fixing up this error, the undo function now
+						functions in the way that I had intended it to be.</p>
+					</div>
+				</div>
+				<h4>-Component test 4-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp4.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>When building this final component for the sprint, I used a similar
+						method to the undo component. Through creating a removedSet array, I
+						slightly altered the undo component as instead of only popping the last
+						object drawn from my objectSet array, I then pushed the item into the new
+						array called removedSet. From here, I reversed this action when the user
+						intends to redo this aspect, by instead popping the last drawn item in the
+						array and pushing it to my object array. This component mainly worked the
+						intended way, although I noticed that an unexpected error would occur when
+						there was nothing in the object or removed array. To fix this error, which
+						has been shown to be fixed in the final video of this sprint, I included an
+						if statement, so that items will only be popped from the arrays if they are
+						greater than zero in length.</p>
+					</div>
+				</div>
+				<h2>Sprint Review</h2>
+				<p>In summary, this sprint worked mostly as intended and all expected components were
+				eventually successfully incorporated into my main program. In this sprint, after
+				finding the correct values for the triangle points, I added two new shape options
+				for the user in this drawing program to give them a wider variety of accessible tools.
+				I am satisfied with how the isosceles triangle is drawn upon the release of the users
+				mouse and will embellish the line option later on in the production process. For the
+				second component that was added in this sprint, the clear canvas option was built
+				smoothly without any intended errors and ran in the correct way. Upon creating the
+				undo and redo components, I noticed that some form of boundaries will also need to be
+				implemented in this sprint, so components will work the intended way. It is clear that
+				this method used (as discussed above) will need to be addressed and altered in future
+				sprints, due to the fact that it does not follow the future proofing relevant
+				implication. Once this aspect was included, I was satisfied with the way that the
+				undo and redo options behaved with varying possible inputs that a user could make,
+				which I tested above. I believe that this sprint was successful in the regard where
+				almost all errors that occurred where properly addressed, and many aspects were
+				still able to be cleanly build without errors.</p>
+				<hr>
 <!--------------------------------------------------------------------------------------------------------------------->
  <hr>
  <hr>
