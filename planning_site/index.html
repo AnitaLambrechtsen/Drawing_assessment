@@ -36,6 +36,7 @@
 					<li><a href="#S2">Sprint 2</a></li>
 					<li><a href="#S3">Sprint 3</a></li>
 					<li><a href="#S4">Sprint 4</a></li>
+					<li><a href="#S5">Sprint 5</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -402,6 +403,254 @@ error-proof, which is something very important when dealing with the unexpected 
 				almost all errors that occurred where properly addressed, and many aspects were
 				still able to be cleanly build without errors.</p>
 				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S5">Sprint Five</h2>
+				<p><b>Aim:</b> My aim for sprint five is to add a feature to my shape tools that is
+				very common in drawing tools such as Google Drawing and Adobe Illustrator. I
+				aim to give the users the ability to hold down their shift key, that will turn
+				a rectangle into a square or an ellipse into a circle, if either button is selected
+				and the shift key is held when the mouse is released. </p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint four board</h4>
+				<img class="img-responsive" src="assets/img/sprint5board.png" alt="">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint5diagram.jpg" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp1.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>In this first component test, I am testing whether my circle class functions
+						in the intended way. As seen in the video, I have not altered the draggable
+						guide to match the circle, as all I have done in this first component
+						is ensure that the circle is being drawn correctly, in relation to the users
+						mouse when selected. The implementation of this component went smoothly,
+						without any unexpected errors. <br> Another noticeable addition that I made in
+						this sprint is to do with styling and aesthetics. I slightly changed the font
+						to still be readable, though less bold, so I have room to add more features in
+						the near future. As well as this, by making the clear button red, users will
+						recognise this as a sign of a warning due to things like stop signs and traffic
+						lights. This is important because it will clear the whole canvas, so they
+						are warned to consider clicking the button beforehand. Its position in the
+						top left corner also is to subtly aid the users, improving the usability of
+						my program, as users should also be familiar with the idea of a clear or exit
+						button located in either the top left or right corner of a screen or object. Using this
+						similar logic, an undo button with a pink/light red tone also indicates that it will do a
+						similar action to a clear canvas button, as instead of clearing all objects,
+						only one object is removed.	The green redo button, which is a colour of nature
+						and renewal, also makes aesthetic sense to colour it this colour, so users have
+						a subconscious idea that nothing will be removed when selecting this button.
+						</p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For the second component test in this sprint, I was testing
+						the implementation of the two event listeners, 'KeyDown' and 'KeyUp'.
+						Through console logging the key that was help down and then released, I was
+						able to test if I was successful in this aspect. This was a simple addition
+						to my drawing program that happened without any unintended errors.</p>
+					</div>
+				</div>
+				<h4>-Component test 3-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp3.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp3fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For this next component, I focused on the draggable guides of both my
+						rectangle and ellipse buttons while the shift key is held. From this first
+						component test, I am satisfied with the way that the rectangle guide is,
+						although the circle guide is not sizing correctly. To create the rectangle
+						guide, I updated the height and width variables to be the same, depending
+						on what the smaller value is. I believe that this is a good design and
+						should work when it comes to actually drawing the shape. The ellipse on the
+						other hand, mostly works as intended, although, in some cases the ellipse
+						will extend the square when the mouse crosses over the diagonal line that
+						can be seen in the guide. <br> To fix this error, as seen in the video
+						below the first one, I altered the variables of the circle, so it will not
+						extend the box. Due to this, I am satisfied with how the guides for both
+						buttons behave, and the implementation of drawing the shapes should happen
+						in a similar way. </p>
+					</div>
+				</div>
+				<h4>-Component test 4-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp4.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp4fix1.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp4fix2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As seen in the first video test of drawing a circle while the shift key is held component,
+						when I attempted to draw the circle while the shift key is held and the ellipse button is
+						selected, a circle is drawn in the correct position if the mouse and shift key is released at
+						the same time. Unfortunately, the circle was also being drawn if the shift key is hit without
+						the mouse being down while the ellipse button is selected. This means that
+						there is an error in the section of my program related to how the shape is
+						being drawn and possibly the variables that are being used to draw the circle.
+						Fortunately, the drawing of the ellipse has not been altered if no additional
+						keys are pressed with the ellipse button selected. I also commented out the draggable
+						guide component, as I believed that it would be easier to ensure that the two
+						components work co-dependently before combining the two of them. Due to this aspect,
+						I also noticed that there were two possible ways that I could have the
+						circle drawn while the shift key is held. The first possibility would be where
+						the original draggable guide was in the previous component, starting at the where
+						the mouse was first down. This would then have the diameter of either the width or
+						height (depending on what was smaller). If I was to continue with this option, the
+						box that the circle is drawn it will be disconnected from the mouse. This is because you
+						cannot force the mouse to go in certain positions like where the perfect
+						circle would end in javascript, as the user must be able to control their mouse
+						due to the malicious possibilities of designers, such as forcing a mouse to click a
+						link that will download malware onto the user's device. The second design
+						option is to keep a base rectangle for the draggable guide, and the ellipse in
+						the centre will change from an ellipse to a circle depending on whether the
+						shift key is still held. <br> As seen in the next video, I decided to go with the
+						second design for drawing a circle while the shift key is held. This is because
+						I believe the design is cleaner and easier for users to understand. This means
+						that the mouse will be constantly still attached to a guide and the ellipse
+						or circle will be drawn from the centre point of when the mouse is first down,
+						to when the mouse is released up. To fix the error that occurred in my last test,
+						I altered the variables that I was using when drawing the circle and with a set
+						design option, it was easier to result in the outcome I intended, so the
+						circle is drawn correctly. In the final video, I combined both the correct
+						way the circle is being drawn and the altered draggable guide to fit the
+						second design. I am satisfied with how the ellipse cleanly shifts from an
+						ellipse to a circle from within the rectangle when the shift key is held
+						and I believe this is easily understood by users. </p>
+					</div>
+				</div>
+				<h4>-Component test 5-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp5.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_comp5fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>When implementing the shift key option to the rectangle shape component,
+						the first video highlights the errors that I were faced with. If I was to
+						use the first design method, this would once again separate the mouse from
+						the guide, and so I updated this method as well, to match the second
+						design. On top of this, I noticed that the square was not able to be drawn
+						in the top right or bottom left. In the second video, I resolved this
+						error through using abs, as the values would become negative and unable
+						to be drawn as the rectangle was being drawn based on whether the width
+						or height was larger, so in particular directions this would incorrectly
+						change. The draggable guide follows a similar design to the ellipse, which can be seen in
+						the second video, where the transition from a rectangle to a square is
+						also clean and ended up being following the design that I had intended.
+						Mostly, in the implementation of this component, I followed a similar
+						method to the ellipse button, with if else statements for whether the shift
+						key is held or not. </p>
+					</div>
+				</div>
+				<h4>-Final test-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint5_final.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>Finally, I did one last final test of this sprint to check that everything
+						is working accordingly, as there were many components to this sprint. One
+						noticeable feature that I altered at the very end was to take out the
+						circle button. I did this because now the users can create circles through the
+						ellipse function, so a separate button for the same feature is unnecessary. </p>
+					</div>
+				</div>
+				<h4>-Usability test-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/house_drawing.png" alt="">
+					</div>
+					<div class="col">
+						<p>At the end of this sprint, I thought it would be fitting to do a usability
+						test. The relevant implication of usability is an important thing to
+						consider, especially when designing a program for the intended audience
+						of children, so everything must be relatively comprehensible. As the
+						main purpose of this program is to be a drawing program, if it is
+						difficult to produce drawings, then the usability of the program is failing.
+						Later in the development of my program, I will also do a test on another
+						person to test for unexpected behaviour. From a personal test, I found
+						my program to be easy to use and draw with. I was grateful for undo and redo
+						buttons as there were a few mistakes made along the way, which is a benefit
+						in the regard of functionality. Overall, I am satisfied with the progress
+						that I have currently made, although there are still further features
+						that I hope to achieve to enhance and develop drawing possibilities.</p>
+					</div>
+				</div>
+				<h2>Sprint Review</h2>
+				<p>This sprint did have some unintended errors, although I am satisfied with the
+				final outcome. In this sprint, I introduced circles and squares that can be drawn
+				when the ellipse or rectangle button is selected and the user holds down the shift
+				key while drawing. I did this through creating a new event listener which was
+				successfully incorporated into my InteractiveObject class. When presented with some
+				errors, I realised that there were two main designs that I could pick between
+				when coding how the ellipse and rectangle moves into a circle or square when the
+				shift key is held. I am satisfied with the design that I chose to follow through with,
+				even though there were some unexpected errors which occurred while building the
+				design. Some of these errors include incorrect placements of drawn objects in
+				relation to the mouse and glitching draggable guides. Thankfully, I was able to
+				internalise any additional errors that occurred in the process of building this
+				sprint. As well as this, I made a few minor changes in terms of the aesthetics
+				such as colour and placement. At the end of this sprint, I decided that it was also
+				a good idea to do a usability test to see if my program is on track to matching
+				the original brief. </p>
+				<hr>
+<hr>
+<h2> Relevant Implications Summary</h2>
+				<h3><u>Sustainability and future proofing</u></h3>
+				<p>Throughout my program, I have addressed the relevant implication of sustainability and
+					future proofing. This relevant implication is important to consider, as a program
+					should be adaptable and have the ability to expand with new applications and frequent updates.</p>
+				<h3>Usability</h3>
+				<p>The relevant implication, usability, is also very important to focus on while
+					building a program. It focuses on the idea that a digital product is able to be
+					understood and properly used for it's desired purpose. That errors can be recognised
+					and recovered from throughout the process, that all information is displayed in
+					a clear way, so the proper requirements of the program is executed in the most efficient way.</p>
+				<h3>Functionality</h3>
+				<p>The final relevant implication that I have addressed is functionality. Functionality
+					is about having a digital product that operates correctly, without any errors or
+					crashes. This is also a very important relevant implication to consider while
+					building a program, as if there are many errors and crashes throughout a program,
+					then the desired outcome cannot be reached. A functional program should perform
+					with the expectation of errors and unexpected inputs/outcomes, and have the
+					ability to either prevent or recover from these occurring. Especially when
+					focusing around the input of a user, as mine does, because users cannot be relied
+					upon to not make faults. If a system crashes or does not run with ease, then
+					it's functionality is poor.</p>
 <!--------------------------------------------------------------------------------------------------------------------->
  <hr>
  <hr>
