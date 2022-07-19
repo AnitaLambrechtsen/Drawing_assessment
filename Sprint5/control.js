@@ -5,11 +5,14 @@ class ControlObject extends InteractiveObject{
         super();
         this.w = 0;
         this.h = 0;
+        this.sz = 0;
         this.objectSet = [];
         this.choice = "";
         this.okayDraw = false
         this.removedSet = [];
+
     }
+
     mClick(){
         if(InteractiveButton.selected) {
             let choice = InteractiveButton.selected.text;
@@ -43,6 +46,22 @@ class ControlObject extends InteractiveObject{
         }
 
     }
+    mKeyDown(e) {
+        super.mKeyDown(e)
+        // let fillColour = Swatch.selectedColour
+        let key = e.code;
+        if (key === "ShiftLeft" || key === "ShiftRight"){
+            this.keyDown = true;
+            // if (this.choice === "Ellipse"){
+            //     let temp = new Circle(this.xMouseStart, this.yMouseStart, this.w, this.h, fillColour)
+            //     this.objectSet.push(temp)
+            // }
+        }
+    }
+    mKeyUp(e) {
+        super.mKeyUp(e);
+
+    }
 
 
     mUp(e){
@@ -51,10 +70,24 @@ class ControlObject extends InteractiveObject{
         // console.log('Mouse Up ' + this.choice)
         if (this.okayDraw) {
             if (this.choice === "Rectangle") {
-                let temp = new Rectangle(this.xMouseStart, this.yMouseStart, this.w, this.h, fillColour)
-                this.objectSet.push(temp)
+                if(this.keyDown){
+                    //this.strokeRect(x+w/2-sz/2,y+h/2-sz/2,sz,sz, colour)
+                    let x = this.xMouseStart + this.w/2-this.sz/2;
+                    let y = this.yMouseStart + this.h/2-this.sz/2;
+                    console.log(x)
+                    console.log(this.xMouseStart)
+                    let temp = new Rectangle(x, y, this.sz, this.sz, fillColour)
+                    this.objectSet.push(temp)
+
+
+                }
+                else {
+                    let temp = new Rectangle(this.xMouseStart, this.yMouseStart, this.w, this.h, fillColour)
+                    this.objectSet.push(temp)
+                }
                 //console.log("rectangle complete")
             } else if (this.choice === "Ellipse") {
+
                 let temp = new Ellipse(this.xC, this.yC, this.radiusX, this.radiusY, this.rotation, this.startAngle,
                     this.endAngle, fillColour)
                 this.objectSet.push(temp)
@@ -67,11 +100,12 @@ class ControlObject extends InteractiveObject{
                 let temp = new Triangle(this.xMouseStart + this.w / 2, this.yMouseStart, this.xMouse, this.yMouse, this.xMouseStart, this.y3, fillColour)
                 this.objectSet.push(temp)
                 console.log("triangle is completed")
-            } else if (this.choice === "Circle") {
-                let temp = new Circle(this.xMouseStart, this.yMouseStart, this.w, this.h, fillColour)
-                this.objectSet.push(temp)
-                //console.log("ellipse complete")
             }
+            // else if (this.choice === "Circle") {
+            //     let temp = new Circle(this.xMouseStart, this.yMouseStart, this.w, this.h, fillColour)
+            //     this.objectSet.push(temp)
+            //     //console.log("ellipse complete")
+            // }
         }
         this.okayDraw = false
 
@@ -105,11 +139,42 @@ class ControlObject extends InteractiveObject{
         let w = this.w
         let h = this.h
         let colour = colArray[0][1];
-        if (this.choice === "Rectangle"){
+        if (this.choice === "Rectangle" && this.keyDown === true ){
+
+            if (Math.abs(this.w) > Math.abs(this.h) ) {
+                this.sz = this.h
+                //this.w = this.h
+            } else {
+                this.sz = this.w
+                //this.h = this.w
+
+            }
+            let sz = this.sz
+            this.strokeRect(x,y,w,h, colour);
+            this.strokeRect(x+w/2-sz/2,y+h/2-sz/2,sz,sz, colour);
+            this.drawLine(x,y,x+w, y+h, colour);
+            this.drawLine(x,y+h,x+w,y, colour);
+            //this.drawLine(x,y,x+sz, y+sz, colour);
+            //this.drawLine(x,y+sz,x+sz,y, colour);
+            //this.drawStrokeCircle(x+ w/2, y +h/2, Math.abs(w/30), colour);
+
+        }
+        else if (this.choice === "Rectangle" ){
             this.strokeRect(x,y,w,h, colour);
             this.drawLine(x,y,x+w, y+h, colour);
             this.drawLine(x,y+h,x+w,y, colour);
-            this.drawStrokeCircle(x+ w/2, y +h/2, Math.abs(w/30), colour);
+            //this.drawStrokeCircle(x+ w/2, y +h/2, Math.abs(w/30), colour);
+        }
+        else if (this.choice === "Ellipse" && this.keyDown === true){
+            if (this.radiusX > this.radiusY) {
+                this.radiusX = this.radiusY
+            } else {
+                this.radiusY = this.radiusX
+            }
+            this.drawStrokeEllipse(x+w/2,y+h/2, this.radiusX,this.radiusY, colour);
+            this.strokeRect(x,y,w,h, colour);
+            this.drawLine(x,y,x+w,y+h, colour)
+            this.drawLine(x,y+h,x+w,y, colour)
         }
         else if (this.choice === "Ellipse"){
             this.drawStrokeEllipse(x+w/2,y+h/2, this.radiusX,this.radiusY, colour);
@@ -121,6 +186,7 @@ class ControlObject extends InteractiveObject{
             //this.strokeRect(x,y,w,h, colour);
             this.drawLine(x,y,x+w, y+h, colour);
         }
+
         else if (this.choice === "Triangle"){
             this.strokeRect(x,y,w,h, colour);
             this.drawLine(x,y,x+w,y+h, colour)

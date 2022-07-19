@@ -94,15 +94,16 @@ class InteractiveObject{
         this.xMouse = 0;
         this.yMouse = 0;
         this.mouseIsDown = false;
+        this.keyDown = false;
     }
     mKeyDown(e){
-        console.log("key down")
-        console.log(e.code);
+        //console.log("key down")
+        //console.log(e.code + " down");
     }
     mKeyUp(e){
-        console.log("key up")
-        console.log(e.code);
-
+        //console.log("key up")
+        //console.log(e.code + " up");
+        this.keyDown = false;
     }
     mDown(e){
         this.xMouseStart = e.offsetX;
