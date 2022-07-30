@@ -37,6 +37,7 @@
 					<li><a href="#S3">Sprint 3</a></li>
 					<li><a href="#S4">Sprint 4</a></li>
 					<li><a href="#S5">Sprint 5</a></li>
+					<li><a href="#S6">Sprint 6</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -301,7 +302,9 @@ error-proof, which is something very important when dealing with the unexpected 
 					</div>
 					<div class="col">
 						<p>As can be seen in the first testing image to the left, I was successfully
-						able to create a triangle class and function. This class and function did
+						able to create a triangle class and function by starting with beginPath(),
+							which then followed manually drawing and moving the next line to a
+							certain point. This class and function did
 						correctly make a triangle, although I found it difficult to work out the
 						correct point values for an isosceles triangle. The triangle in the image
 						is one of my many attempts to assign the correct values for the object. <br>
@@ -338,6 +341,9 @@ error-proof, which is something very important when dealing with the unexpected 
 							<source src="assets/vids/sprint4_comp3.mov">
 						</video>
 						<video class="vids" controls>
+							<source src="assets/vids/sprint4_comp3fix1.mov">
+						</video>
+						<video class="vids" controls>
 							<source src="assets/vids/sprint4_comp3fix.mov">
 						</video>
 					</div>
@@ -350,14 +356,22 @@ error-proof, which is something very important when dealing with the unexpected 
 						of which there are no boundaries on the clickable buttons located within
 						the canvas boundary. Due to this, as can be seen in the console log, when
 						the undo button is selected to undo, a new object will be formed to
-						remove from the object array. This is why the undo button needed to be
-						clicked twice before a noticeable object was removed from the canvas. To
-						fix this error, I set a new variable to the width and height of the canvas
+						remove from the object array when clicking an option in the toolbar. This is why the undo
+						button needed to be clicked more than once before a noticeable object was removed from the
+						canvas. To fix this error, I set a new variable to the width and height of the canvas
 						without the buttons, so a new shape can only be drawn within those set
-						values to resolve this error. Due to the fact that I am following the
-						agile process, I implemented the easiest way to boundary check, which
+						values. Due to the fact that I am following the
+						agile process, I implemented a simple boundary check, which
 						will be later improved so manual measurements do not need to be assigned
-						particular values. <br>As shown in the video below this one in the
+						particular values. <br> As seen in the second video, upon adding the
+						boundary feature, the user can no longer start a drawing in the toolbar
+						area, and so if they click on a button, no
+						object will be drawn. What I have also demonstrated in this video is that
+						this does not apply when the user ends the shape in the toolbar, meaning that
+						a shape may be drawn over buttons and covering them. This issue I intend
+						to fix in future sprints, as currently the functionality of my program due
+						to this and the other issue with boundaries I previously mentioned, is
+						not at an acceptable standard. <br>As shown in the third video in the
 						component test, upon fixing up this error, the undo function now
 						functions in the way that I had intended it to be.</p>
 					</div>
@@ -381,8 +395,9 @@ error-proof, which is something very important when dealing with the unexpected 
 						there was nothing in the object or removed array. To fix this error, which
 						has been shown to be fixed in the final video of this sprint, I included an
 						if statement, so that items will only be popped from the arrays if they are
-						greater than zero in length.</p>
+						greater than zero-in-length.</p>
 					</div>
+
 				</div>
 				<h2>Sprint Review</h2>
 				<p>In summary, this sprint worked mostly as intended and all expected components were
@@ -628,7 +643,111 @@ error-proof, which is something very important when dealing with the unexpected 
 				a good idea to do a usability test to see if my program is on track to matching
 				the original brief. </p>
 				<hr>
-<hr>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S6">Sprint Six</h2>
+				<p><b>Aim:</b> My aim for sprint six is to improve the boundaries of the canvas which is an error that
+					I have previously mentioned earlier on in the project. This occurs when the user is drawing
+					and the mouse leaves the canvas, or is down while entering the canvas. The
+					user should also not be able to draw over the options, but still be able to
+				draw them, as the options are located on the canvas.</p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint four board</h4>
+				<img class="img-responsive" src="assets/img/sprint6board.png" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<h3>Testing</h3>
+				<h4>Component test 1</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint6.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>In this first component test, I figured that the way to solve the error
+							occurring when the mouse leaves the canvas is through adding an if condition.
+							While the mouse has left the canvas, if the mouse is down, then the mouse
+							should be considered as up, and the boolean 'inBounds' and 'mouseIsDown' is false.
+							This fixed the error that has been occurring because an object is drawn
+							once a mouse that has been down is released, so as soon as the mouse
+							leaves canvas the object will be automatically drawn at the edge as it is set
+							to be up. This also means that when the mouse is entering the canvas held down, it
+							will not be considered down, so an object will not be drawn upon release.
+							</p>
+					</div>
+				</div>
+				<h4>Component test 2</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint6.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint6fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For this second component, my aim is to ensure that the user cannot draw an
+						object over the toolbar. This is because it is crucial for the user to still be able to
+						interpret the toolbar with all the buttons, for the purpose of usability, which
+						would not be possible with a shape covering them. I did this using a JavaScript
+						method which is to create a separate area from the main canvas that will be clipped.
+						As the mUp() is still considered when the user's mouse leaves the canvas, the
+						shape will be drawn at the edge of the canvas, although it will be drawn
+						underneath the toolbar. As the toolbar is still located on the canvas, I enjoy
+						this feature in my program instead os setting the mUp() to be within the clipped
+						area. This also leaves the possibility for further options in the future of my
+						program. These could be for the toolbar to be moved or minimised within the
+						canvas that over the canvas and the objects drawn within it. In this first
+						video test, everything is working seemingly as intended, although the toolbar
+						alterations when hovered over or selected are not running. As I shortly noticed,
+						this was because I had not included ctx.restore() at the end of my update class, which
+							meant that these features of the toolbar were being clipped in that particular area.
+						As seen in the following video, by including this line of code, my program
+						was functioning as intended and these boundary errors have been resolved. </p>
+					</div>
+				</div>
+				<h4>-Noticed issue from previous sprints-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint6error.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint6errorfix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>Upon further trialling this sprint, I noticed a very small but important error
+						that has a large impact on the functionality of my program. This was improved
+						by one line of code, but as demonstrated in the first video, I had previously
+						forgotten to set the InteractiveButton.selected to "" once the undo or
+						redo array has been popped. This meant that it remained selected after this
+						action has occurred, so wherever you select on the screen if either is selected,
+						that action will continue to occur. This was quickly resolved, as
+						seen in the second video, but demonstrates the importance of extensive testing. </p>
+					</div>
+				</div>
+				<h2>Sprint Review</h2>
+				<p>In summary, this sprint was implemented fairly successfully and the components
+				that were introduced into this sprint were eventually running as intended. While
+				this sprint was relatively short in comparison to previous sprints, it was one
+				that was crucial for the functionality and way that my program behaves. Ideally,
+				a user would not need to leave the canvas, but in order for a program to
+				be functional, it must be able to handle all forms of use, and improving this
+				was the main aim for the sprint which I believe was achieved. While there was a
+				minor error that occurred when clipping my toolbar from the whole canvas, this
+				was shortly resolved. Choosing to allow the user to still draw in the area within
+				the toolbar, only underneath, was the option that I chose to continue with
+				and am satisfied with. This sprint also ensured that other issues cannot occur
+				with leaving and entering the boundaries of the canvas, which is an important
+				aspect of my program through considering a mouse that is down outside
+				the canvas to be up and out of bounds.</p>
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
 <h2> Relevant Implications Summary</h2>
 				<h3><u>Sustainability and future proofing</u></h3>
 				<p>Throughout my program, I have addressed the relevant implication of sustainability and
