@@ -38,6 +38,8 @@
 					<li><a href="#S4">Sprint 4</a></li>
 					<li><a href="#S5">Sprint 5</a></li>
 					<li><a href="#S6">Sprint 6</a></li>
+					<li><a href="#S7">Sprint 7</a></li>
+					<li><a href="#RI">Relevant Implications</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -748,7 +750,195 @@ error-proof, which is something very important when dealing with the unexpected 
 				the canvas to be up and out of bounds.</p>
 				<hr>
 <!--------------------------------------------------------------------------------------------------------------------->
-<h2> Relevant Implications Summary</h2>
+				<h2 id="S7">Sprint 7</h2>
+				<p><b>Aim:</b> My aim for sprint 7 is to improve the layout of the canvas more
+				options can be available to the user in this program, and it is presented in a
+				familiar but professional way. Within this, I aim to create a class with just
+				a rectangle and text, so I can add instructions where they are needed. I also
+				aim to create a new class with a main button, and then sub buttons, so within
+				this sprint I can also develop the line and triangle object options. </p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint seven board</h4>
+				<img class="img-responsive" src="assets/img/sprint7board.png" alt="Sprint 7 board">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint7diagram.jpg" style="max-width: 40%;" alt="">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/sprint7comp1.png" alt="">
+					</div>
+					<div class="col">
+						<p>In this first component test, as seen in the image to the right, I
+							edited the layout of my canvas. While this was tedious, it was
+							successful and resulted in being a fairly identical image to the
+							one that was intended in my expected diagram. To replicate this,
+							I added six more colours into my colArray, to give the user more
+							options for the colours of each shape, which spans as the majority
+							of my top toolbar. Another adjustment I included to replicate the
+							intended layout for my canvas, is adding in the buttons that will
+							ideally be options for the user in the near future. While these
+							buttons do not have a purpose yet, they will most likely be the
+							focus of the next sprints. Finally, the last thing I added as a part
+							of this component is a new rectangle with text class. This was
+							fairly simple, but I created a class that is not a button, but
+							can print text over a rectangle drawn. The intention of this class
+							is for information and instructions to the user. This may be needed
+							in the future more than currently, though the current reason I
+							created this class is for informing the user about the shift
+							option for rectangles and ellipses, as this does not need to be a
+							separate interactive button. On top of this, through altering
+						the layout of the toolbars, I also altered the boundaries and
+						size of the canvas to ensure the boundaries were correct according
+						to the new toolbar and that the users will still have enough space
+						to draw on the canvas.</p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/sprint7comp1.png" alt="">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For the second component test in this sprint, I was testing my SecondaryButton
+						class, designed for the child buttons within their parent ones. While
+						there were a few possible options for how I could design feature, such as
+						creating arrays with the child buttons within the parent button, I decided
+						that the method I chose was the most efficient for the purpose of
+						sustainability and future proofing. Through using a similar process
+						as my InteractiveButton and Swatch class, the class runs almost identically,
+						if the parent button selected equals the parent button that the SecondaryButton
+						falls under. As I still wanted the button to print regardless of whether the
+						parent button was selected or not. As seen in the image to the left, when
+						testing this on the small option under the line parent, through a few trials,
+						most commonly the outcome would result in the button not being printed. This was
+						often due to my check to see if the parent that was selected is
+						the same as the one that is unique to that SecondaryButton resulting in the
+							class to be unable to function. Fortunately,
+						this was shortly solved with slight variations in my code. As of this
+						current moment, it appears that this class runs successfully before I implement
+						the further options for the shapes.</p>
+					</div>
+				</div>
+				<h4>-Component test 3-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp3.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp3fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As seen in the first video of this component test, the aim for this
+						component is for varying thicknesses for my line tool, operated within
+						the most recent SecondaryClass that I implemented. To draw the different
+						versions with each button, I was checking what button was selected through
+						matching the text with SecondaryButton.selected.text. In this second video,
+						it is demonstrated how an Uncaught TypeError occurs with this scenario of
+						code, as when the parent class is first selected, a child button selected
+						does not yet exist (null) because the user has not yet selected a child
+						button. From this, this error occurs, which is not an ideal design because
+						the functionality of my program would be not matched to the expected standard.
+						Aside from the error, the small, medium and large thickness options are working
+						as intended. Due to the error, I created an if, else if statement to check if there is a
+						SecondaryButton selected so the null error does not occur and the
+						component is running as intended. From here, I also adjusted the draggable
+						guides to match the thickness of the lines that will be drawn based on what
+						SecondaryButton is selected.</p>
+					</div>
+				</div>
+				<h4>-Component test 4-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp4.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>Upon fixing the errors and complications, completing component 4 was
+						quite simple. I used the same layout for the programming as the line
+						thickness variations. The only noticeable difference was that instead of
+						altering the thickness, I adjusted the starting point of the triangle for
+						the right-angle option and did not alter the draggable guide. </p>
+					</div>
+				</div>
+				<h4>-Component test 5-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp5error.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp5error2.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint7_comp5fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For my fifth component, I decided that it would be easiest to have a default
+							SecondaryButton selected when a parent button is selected. This means that the usability
+							of the program will improve for the user, as the buttons become less
+							complicated and more efficient to use. To do this, I included a boolean
+						called 'defaultButton', which is set to true if it is the default button
+						and false if it is not. From this, by checking if there is a default button
+						and there is no secondary button selected yet, the default button will automatically
+						become selected. As seen in the first and second videos to the left, there
+						were two errors that occurred when I first attempted to implicate this
+						component. The shown in the first video, demonstrates how including
+						a default button is mostly functional. The error occurs when the user was to
+						select the parent button originally selected after using the undo or redo
+						buttons. This occurs because when the SecondaryButton is set to null after
+						the undo or redo button is selected, the SecondaryButton will remain selected
+						because of my if statement, 'if (SecondaryButton.selected === this ||
+							(this.defaultButton && SecondaryButton.selected === null )) {'. The
+						second error, as shown in the second video, occurs when the user clicks on
+						a child button from a different parent. This means that the original
+						button is unselected which is not intended. To fix both of these errors,
+						I included the if statement, 'if ( InteractiveButton.selected &&
+							InteractiveButton.selected.text === this.parentButton ) {', to wrap
+						where the buttons change when the buttons can become selected. By
+						wrapping where the boundary can be retrieved in if statement, the second
+						error is fixed because it can now only be retrieved if the parent
+						button is selected. This also means the first error is resolved because
+						the default button will be selected when the parent button is first
+						selected. These fixes are shown in the last video, where it is
+						demonstrated how all the components I have implemented in this
+						sprint have been added as intended. </p>
+					</div>
+				</div>
+
+				<h2>Sprint Review</h2>
+				<p>In this sprint, there were a few unexpected errors, but overall, I am satisfied
+				with the final outcome. In this sprint, I originally altered the layout of my
+				canvas to allow for more shape options and colours that the user would have
+				access to. This in turn meant that I had to alter the boundaries and then create
+				a WordRect class. My next component was to design a SecondaryClass for the child
+				buttons that would only be able to be selected if the parent button was. This
+				had some unintended errors and once I had resolved these for this sprint, it became
+					apparent in my following sprint when actually running different object
+					options that the errors were not fully resolved. The next component That I implemented in this
+				sprint was further line thickness options falling under the parent line button. Originally,
+				null type errors occurred due to InteractiveButton.selected.text being null, that
+				was fixed by first checking to see if the object existed. From this stage, I was able
+				to both add the variations in the line tool and triangle tool. The last component in
+				this sprint that I added was a default button for these shape options, to further prevent
+				errors and improve the usability of my program. There were two errors that came with my
+				first attempt at this component where a child button would not be selected as intended,
+				that was resolved with another if statement. </p>
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+<h2 id="RI"> Relevant Implications Summary</h2>
 				<h3><u>Sustainability and future proofing</u></h3>
 				<p>Throughout my program, I have addressed the relevant implication of sustainability and
 					future proofing. This relevant implication is important to consider, as a program
