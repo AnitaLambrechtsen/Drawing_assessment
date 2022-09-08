@@ -39,6 +39,10 @@
 					<li><a href="#S5">Sprint 5</a></li>
 					<li><a href="#S6">Sprint 6</a></li>
 					<li><a href="#S7">Sprint 7</a></li>
+					<li><a href="#S8">Sprint 8</a></li>
+					<li><a href="#S9">Sprint 9</a></li>
+					<li><a href="#S10">Sprint 10</a></li>
+					<li><a href="#R">Reflection</a></li>
 					<li><a href="#RI">Relevant Implications</a></li>
 				</ul>
 			</div>
@@ -68,8 +72,8 @@
 
     <!-- Heading levels -->
 <h4>Reference inspiration images</h4>
-				<img src="assets/img/inspo1.png" style="max-width: 30%;"  alt="">
-				<img src="assets/img/inspo2.png" alt="">
+				<img src="assets/img/inspo1.png" style="max-width: 30%;"  alt="Inspiration image 1">
+				<img src="assets/img/inspo2.png" alt="Inspiration image 2">
 				<br>
 <h2>Project Backlog</h2>
 				<video controls>
@@ -85,13 +89,17 @@ the mouse, a permanent box is drawn.</p>
 <h3>Plan</h3>
 
 <h4>Sprint one board</h4>
-<img class="img-responsive" src="assets/img/sprint1board.png" alt="">
+<img class="img-responsive" src="assets/img/sprint1board.png" alt="Sprint 1 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint1diagram.png" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint1diagram.png" style="max-width: 40%;" alt="Expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
-<p>Link to the Canvas Page</p>
+				<img src="assets/img/pcsprint1.jpg" style="max-width: 40%;" alt="Sprint 1 pseudo code">
+				<img src="assets/img/pcsprint1-3.jpg" style="max-width: 40%;" alt="Sprint 1 pseudo code">
+				<img src="assets/img/pcsprint1-2.jpg" style="max-width: 40%;" alt="Sprint 1 pseudo code">
+				<img src="assets/img/pcsprint1-4.jpg" style="max-width: 32%;" alt="Sprint 1 pseudo code">
+				<br>
 <h3>Testing</h3>
 				<h4>-Component test 1-</h4>
 				<div class="col-container">
@@ -104,7 +112,7 @@ the mouse, a permanent box is drawn.</p>
 
 <p>In this video testing to the left, I am testing the boundaries on the mouse through console logging the class
 'InteractiveObject', which I have designed to tract the status of the mouse. It is shown in the video, that the
-mouse's movements (click, down and up) will only be recorded if the mouse is inside the canvas, this is because in
+mouse's movements (click down and back up) will only be recorded if the mouse is inside the canvas, this is because in
 the future of this project, the user should not be needing to draw or control elements outside canvas as that is the
 primary use for a canvas. It can also be seen that my grid class is successfully working in the background
 of the canvas and the canvas itself has been created without fault. So far, in these early stages I have been
@@ -120,11 +128,11 @@ presented with no unexpected errors.</p>
 						</div>
 						<div class="col">
 <p>In this video test, I am testing the functionality of the draggable guide and the drawing of rectangles. As
-shown in the beginning of the video, as long as the mouse stays within the canvas. The draggable guide correctly
-follows the dragging of a users mouse to indicate to them where the box will be drawn and when released,
-the box also correctly follows the position of the draggable guide when released. While these aspects of my
-code do work accordingly, there are also some errors that occur. <br> Due to the fact that the mouse's actions are not
-recorded while outside the canvas, if the user was to press and hold the mouse inside the canvas, to then
+shown in the beginning of the video, as long as the mouse stays within the canvas. The draggable guide correctly follows
+the dragging of a user's mouse to indicate to them where they first clicked the mouse the box will be drawn from and when
+the mouse button is released, the box also correctly follows the position of the draggable guide when released.  While
+these aspects of my code do work accordingly, there are also some errors that occur. <br> Due to the fact that the mouse's
+actions are not recorded while outside the canvas, if the user was to press and hold the mouse inside the canvas, to then
 move the mouse outside the canvas without the mouse being released, a box cannot be drawn. So when the
 mouse returns to the canvas up, the guide still follows the mouse but no box is drawn. A similar thing occurs
 when the mouse has gone outside the canvas, to return down. Because the origin point where the mouse clicked
@@ -154,12 +162,14 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h3>Plan</h3>
 
 				<h4>Sprint two board</h4>
-				<img class="img-responsive" src="assets/img/sprint2board.png" alt="">
+				<img class="img-responsive" src="assets/img/sprint2board.png" alt="Sprint 2 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint2diagram.jpg" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint2diagram.jpg" style="max-width: 40%;" alt="Sprint 2 expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint2.jpg" style="max-width: 40%;" alt="Sprint 2 pseudo code">
+				<img src="assets/img/pcsprint2-2.jpg" style="max-width: 40%;" alt="Sprint 2 pseudo code">
 				<hr>
 				<h3>Testing</h3>
 				<div class="col-container">
@@ -169,7 +179,7 @@ error-proof, which is something very important when dealing with the unexpected 
 						</video>
 						<div class="col-container">
 							<div class="col">
-							<img src="assets/img/ellipse_guide.png" alt="">
+							<img src="assets/img/ellipse_guide.png" alt="Ellipse guide error">
 								</div>
 							<div class="col">
 								<code class="javscript"> getBoundary(x, y, w, h, x_m, y_m){
@@ -221,17 +231,20 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h3>Plan</h3>
 
 				<h4>Sprint three board</h4>
-				<img class="img-responsive" src="assets/img/sprint3board.png" alt="">
+				<img class="img-responsive" src="assets/img/sprint3board.png" alt="Sprint 3 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint3diagram.jpg" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint3diagram.jpg" style="max-width: 40%;" alt="Sprint 3 expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint3.jpg" style="max-width: 40%;" alt="Sprint 3 pseudo code">
+
+				<br>
 				<h3>Testing</h3>
 				<h4>-Component test 1-</h4>
 				<div class="col-container">
 					<div class="col">
-						<img class="img-responsive" src="assets/img/sprint3_colours.png" alt="">
+						<img class="img-responsive" src="assets/img/sprint3_colours.png" alt="Colour swatch image">
 						</div>
 					<div class="col">
 						<p>The image to the right, I am testing if the swatch's layout prints correctly. There
@@ -269,7 +282,7 @@ error-proof, which is something very important when dealing with the unexpected 
 				</div>
 				<h2>Sprint Review</h2>
 				<p>In summary, this sprint worked accordingly and no impactful errors occurred while I was
-					building each component. While considering the aesthetics and recognisability of my
+					building each component. While considering the aesthetics and recognisably of my
 				swatch, I was able to print my intended design successfully with a loop through both
 					arrays. On top of this, I was able to then create a swatch class successfully and
 				make each unique colour and opacity into a button that the user is able to select
@@ -287,17 +300,19 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h3>Plan</h3>
 
 				<h4>Sprint four board</h4>
-				<img class="img-responsive" src="assets/img/sprint4board.png" alt="">
+				<img class="img-responsive" src="assets/img/sprint4board.png" alt="Sprint 4 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint4diagram.jpg" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint4diagram.jpg" style="max-width: 40%;" alt="Sprint 4 expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint4.jpg" style="max-width: 40%;" alt="Sprint 4 pseudo code">
+				<img src="assets/img/pcsprint4-2.jpg" style="max-width: 40%;" alt="Sprint 4 pseudo code">
 				<h3>Testing</h3>
 				<h4>-Component test 1-</h4>
 				<div class="col-container">
 					<div class="col">
-						<img class="img-responsive" src="assets/img/sprint4_tri.png" alt="">
+						<img class="img-responsive" src="assets/img/sprint4_tri.png" alt="Triangle test">
 						<video class="vids" controls>
 							<source src="assets/vids/sprint4_comp1.mov">
 						</video>
@@ -365,10 +380,12 @@ error-proof, which is something very important when dealing with the unexpected 
 						values. Due to the fact that I am following the
 						agile process, I implemented a simple boundary check, which
 						will be later improved so manual measurements do not need to be assigned
-						particular values. <br> As seen in the second video, upon adding the
+						particular values. <br>
+							As seen in the second video, upon adding the
 						boundary feature, the user can no longer start a drawing in the toolbar
-						area, and so if they click on a button, no
-						object will be drawn. What I have also demonstrated in this video is that
+						area. So if the user clicks on a button such as the undo button, no
+						object will be drawn and the undo button would not need to be clicked multiple
+							times to be functional. What I have also demonstrated in this video is that
 						this does not apply when the user ends the shape in the toolbar, meaning that
 						a shape may be drawn over buttons and covering them. This issue I intend
 						to fix in future sprints, as currently the functionality of my program due
@@ -430,13 +447,14 @@ error-proof, which is something very important when dealing with the unexpected 
 
 				<h3>Plan</h3>
 
-				<h4>Sprint four board</h4>
-				<img class="img-responsive" src="assets/img/sprint5board.png" alt="">
+				<h4>Sprint five board</h4>
+				<img class="img-responsive" src="assets/img/sprint5board.png" alt="Sprint 5 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint5diagram.jpg" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint5diagram.jpg" style="max-width: 40%;" alt="Sprint 5 expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint5.jpg" style="max-width: 40%;" alt="Sprint 5 pseudo code">
 				<h3>Testing</h3>
 				<h4>-Component test 1-</h4>
 				<div class="col-container">
@@ -609,7 +627,7 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h4>-Usability test-</h4>
 				<div class="col-container">
 					<div class="col">
-						<img class="img-responsive" src="assets/img/house_drawing.png" alt="">
+						<img class="img-responsive" src="assets/img/house_drawing.png" alt="Image of drawn scene">
 					</div>
 					<div class="col">
 						<p>At the end of this sprint, I thought it would be fitting to do a usability
@@ -656,10 +674,11 @@ error-proof, which is something very important when dealing with the unexpected 
 
 				<h3>Plan</h3>
 
-				<h4>Sprint four board</h4>
-				<img class="img-responsive" src="assets/img/sprint6board.png" alt="">
+				<h4>Sprint six board</h4>
+				<img class="img-responsive" src="assets/img/sprint6board.png" alt="Sprint 6 kanban">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint6.jpg" style="max-width: 40%;" alt="Sprint 6 pseudo code">
 				<h3>Testing</h3>
 				<h4>Component test 1</h4>
 				<div class="col-container">
@@ -761,17 +780,18 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h3>Plan</h3>
 
 				<h4>Sprint seven board</h4>
-				<img class="img-responsive" src="assets/img/sprint7board.png" alt="Sprint 7 board">
+				<img class="img-responsive" src="assets/img/sprint7board.png" alt="Sprint 7 kanban">
 				<hr>
 				<h3>Diagram of expected outcome</h3>
-				<img src="assets/img/sprint7diagram.jpg" style="max-width: 40%;" alt="">
+				<img src="assets/img/sprint7diagram.jpg" style="max-width: 40%;" alt="Sprint 7 expected outcome diagram">
 				<hr>
 				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint7.jpg" style="max-width: 40%;" alt="Sprint 7 pseudo code">
 				<h3>Testing</h3>
 				<h4>-Component test 1-</h4>
 				<div class="col-container">
 					<div class="col">
-						<img class="img-responsive" src="assets/img/sprint7comp1.png" alt="">
+						<img class="img-responsive" src="assets/img/sprint7comp1.png" alt="New layout image">
 					</div>
 					<div class="col">
 						<p>In this first component test, as seen in the image to the right, I
@@ -802,7 +822,6 @@ error-proof, which is something very important when dealing with the unexpected 
 				<h4>-Component test 2-</h4>
 				<div class="col-container">
 					<div class="col">
-						<img class="img-responsive" src="assets/img/sprint7comp1.png" alt="">
 						<video class="vids" controls>
 							<source src="assets/vids/sprint7_comp2.mov">
 						</video>
@@ -938,97 +957,657 @@ error-proof, which is something very important when dealing with the unexpected 
 				that was resolved with another if statement. </p>
 				<hr>
 <!--------------------------------------------------------------------------------------------------------------------->
-<h2 id="RI"> Relevant Implications Summary</h2>
+				<h2 id="S8">Sprint 8</h2>
+				<p><b>Aim:</b> My aim for sprint 8 is to create a crescent option for the user. I intend
+				to either use two arcs or a combination of two circles to successfully complete this. A
+				crescent button also allows for further possibilities for the user to draw with.</p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint eight board</h4>
+				<img class="img-responsive" src="assets/img/sprint8board.png" alt="Sprint 8 kanban">
+				<hr>
+				<h3>Different approaches for this sprint</h3>
+				<img src="assets/img/sprint8plan.jpg" style="max-width: 40%;" alt="Drawings of different possibilities for crescent">
+				<div class="col-container">
+					<div class="col">
+						<img class="img-responsive" src="assets/img/sprint8_opt2.png" alt="Test of option 1">
+						<img class="img-responsive" src="assets/img/sprint8_opt1.png" alt="Test of option 2">
+						</div>
+					<div class="col">
+						<p>As seen in the image above and the two images to the left, there were two
+						possible ways I could design the crescent functions. In my drawn diagram above,
+						the first approach to create a crescent moon shape would be to draw two circles,
+						and then the second circle cuts the first circle in the area where they overlap.
+						As I have also demonstrated, a design element that I have to consider is
+						if the second circle should be the same or a smaller size than the original circle to create
+						a different looking crescent. As also seen, the second approach is to draw two
+						separate arcs to connect together, and what is drawn is the filled area inside the
+						arcs. <br> Through a separate site, I attempted to recreate a very basic version
+						of how the two approaches could appear when drawn. This was done so that throughout
+						this trialling period, nothing in my code would be impacted. Roughly recreating
+						the idea of approach one proved to be very simple, as it would just be dependent on
+						the size and position of the second circle which is easily adjusted. While there
+						may be easier ways to attempt the second approach, I shortly noticed which approach
+						appears to easier and more functional. This is because, if the size or position
+						was altered in the second arc, then the connection points would need to change
+						and while achievable, I believe that the first approach would be the most suitable.
+						The first approach will be better future proofed as this technique should be
+						fairly malleable. </p>
+						</div>
+					</div>
+				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint8.jpg" style="max-width: 40%;" alt="Sprint 8 pseudo code">
+				<h3>Testing</h3>
+				<h4>-Small bug fix-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp1.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp1fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>While this was not a part of the original aim of the sprint, I noticed while
+						doing a further look through my program that the triangles were not being
+						drawn correctly in some circumstances. I was aware that this would be a short
+						fix of errors, and so I am including this brief component within sprint 8. As
+							shown in the first video, it is clear that when the user draws a triangle
+						at a reasonable speed, then it is drawn as intended, whereas if it is drawn
+						at a fast speed, then the triangle would not be either an isosceles or right-angle.
+						This is because, as seen in the video, the third point of the triangle was set
+						to where the mouse finished. Due to this, when the mouse had released, from
+						there being a small period of time where the mouse is still travelling, as the
+						calculation of the y position for the final point is this.y3 = this.yMouseStart+this.h
+						and height is calculated off of this.yMouse - this.yMouseStart so the calculation
+						 causes the error. As shown in the second video, the way I fixed this
+						error was through changing thr final y position to just be this.yMouse.</p>
+					</div>
+				</div>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img src="assets/img/sprint8_comp2-2.png" style="height: 150px;" alt="Different moon styles">
+						<img src="assets/img/sprint8_comp2.png" style="height: 150px;" alt="Different moon styles 2">
+					</div>
+					<div class="col">
+						<p>For the first component, once I had decided on the first approach for the
+						moon shape. On Stackoverflow I found two circle-circle intercept functions that should meee
+						my need.
+							<br>
+						<a href="https://www.w3schools.com/tags/canvas_arc.asp">https://www.w3schools.com/tags/canvas_arc.asp</a>
+							<br> and <br>
+						<a href="https://stackoverflow.com/questions/45329292/how-to-make-a-crescent-moon-shape-in-html-canvas">
+							https://stackoverflow.com/questions/45329292/how-to-make-a-crescent-moon-shape-in-html-canvas</a><br>
+						Their process was understandable, but it saved me from doing the complicated maths
+						that was required for a shape such as this one. In this first component test, I was testing the
+						variations or crescents that was easily possible through slight adjustments
+						to the defined variables.</p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp3.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As seen in the video to the left, for this second component I was testing
+						to see if the shape will be successfully drawn dependent on the position
+						that the mouse clicks on the screen. As I am still using set values for the
+						crescent that is being drawn, once I had determined which design
+							I liked the look of, I had to determine the ratio of these values
+							so it can be applied to the unique values of the user's drawn shape and
+							remain consistent with the styling. </p>
+					</div>
+				</div>
+				<h4>-Component test 3-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp4.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp4fix.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint8_comp4fix2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>This last component is to combine the previous components and create
+						a shape option that the user can select to draw with. As seen in the first
+						video, the size of the crescent is being determined by the greater
+						value of either the width or height. The size of the crescent is being
+						defined correctly, although there are some issues around the positioning
+						of the shape. The first clear problem is, due to the fact a crescent
+						is just an even circle, that the crescent is just drawn in the first
+						corner of where the guide is. To make it clearer to the user and so they
+						can easily understand where their shape is being drawn, I intend to
+						use a similar design to my square and circle options as I believe this
+						method is both clear to the user, and their mouse while dragging to
+						draw the shape remains connected to a draggable guide. The second
+						issue with the positioning is that due to how the shape is drawn from
+						left to right, I will need to ensure that how the crescent is drawn
+						is reversed when drawn from left to right to fix this error. <br> As
+						shown in the second video, in an attempt to successfully complete
+						this component, it is now very close to my intended design. The
+						moon shape now draws from the centre of the guide which was done
+						through setting the starting position to be determined by the centre
+						(this.xC and this,yC) and the width/height depending on how it is
+						being drawn. The only issue that is present in this component is
+						that the position of the circle when drawn from right to left is basing
+						the second circle's position that is being cut instead of the centre
+						postion of the main circle which is the crescents centre. <br> As seen
+						in the final video for this component, I was able to fix this error
+						through reversing the drawing process that occurs normally to
+						create an inverse crescent. With this fixed, the crescent button is
+						now performing how I had intended.</p>
+					</div>
+				</div>
+
+				<h2>Sprint Review</h2>
+				<p>To review this sprint, there were two possible approaches that I could have
+				pursued in this sprint, and I feel confident in the approach that I decided
+				to take. Overall, I am satisfied with the final result of this sprint,
+				despite a few errors and many design possibilities. Upon finding and individual's
+				functions, it was very helpful and allowed me to consider more towards the design
+				of the shape, which is something that is still very important, especially with a
+				program that has active interactions with users. All the errors that I faced
+				while completing this sprint was due the positioning of the moon shape within
+				the rectangular area that the user draws with. They were relatively small errors
+				and were pretty manageable to improve. Another this that can be reviewed for within
+				this sprint is that I believe the approach that I decided upon is the best for the
+				future proofing and sustainability relevant implication as there are many ways
+				that a crescent can be made with and, using a circle-circle intercept function
+				could be useful in the future to create a further range of shapes. Finally,
+				while this was not an intended component of this sprint, I also fixed an error
+				that occurred with how triangles are drawn in my program.</p>
+				<hr>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S9">Sprint 9</h2>
+				<p><b>Aim:</b> My aim for sprint 9 is to create a moving ball function that will
+				allow a user to create a ball travelling up and down. The user should be able to resize
+				and control the area that the ball bounces in.</p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint nine board</h4>
+				<img class="img-responsive" src="assets/img/sprint9board.png" alt="Sprint 9 kanban">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint9.jpg" style="max-width: 40%;" alt="Sprint 9 pseudo code">
+				<hr>
+				<h3>Different approaches for this sprint</h3>
+				<img src="assets/img/sprint9diagram.jpg" style="max-width: 40%;" alt="Different possibilities for ball design">
+				<p>As shown in the image above, there are two possible ways that I could go about
+				this sprint and sizing the ball. There are many options that a ball could become 'moving',
+				whereas my main aim for this sprint is to just create a ball that moves up and down,
+				that the user can change the size of. For the first approach, the moving ball would
+				only be sized by the width. This means that while the height is greater than the width,
+				the ball would bounce reasonably as expected within the box. While this is not an error,
+				it could be slightly off-putting for the user when the width is greater than the height,
+				as to allow for them to size large moving balls, there is not much of an alternative.
+				When the width is greater than the height, the centre point of the ball would bounce
+				from line to line, so while it is not within the box entirely, it is still following
+				the boundaries of the box to an extent. The second approach contradicts what has
+				been my intention, as it would require up, down, left and right movements. It is
+				uncertain how much this may change the understandability this approach
+				would be for the user, and while the ball would remain within the box guidelines, this
+				approach may also be confusing to a user. <br>If in future sprints where myself or
+				an external programmer wishes to extend my program, I believe that through
+				creating an individual up down motion button for a ball, the first approach is
+				easily built upon. On top of this, the user will have a slightly more restricted
+				ability to resize and have to deal with a singular button that causes a ball to
+				travel both directions could be overwhelming. On top of this, the function for the
+				second approach would be a lot more complicated, and as I am following the agile
+				process, it is best to first construct a standard function that can be progressed in
+				further sprints.</p>
+
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp1.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp1fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>In this first component test, as seen in the image to the left, I am testing
+						my MovingBall class. The design of this class is slightly different to
+						the other shapes that I have included in this program, because I needed
+						to consider the animation aspect. My aim for this first component is to have
+						the ball start from the position of the mouse, because then future components
+						can develop on this idea. In the first video, the x start point was a fixed height from the
+						point where the user clicks their mouse and the ball starts at the bottom of that height,
+						travelling to where the mouse is clicked. This issue occurred because
+						the y_b value is not the y starting position, it is actually the position
+						that the ball travels to. As I had set the y_b position to this.yMouseStart
+						instead of this.yMouse where the mouse button was released, the ball was travelling
+						to the start position. In the second video, by changing the y_b to the end position
+						of the mouse, it had worked as planned.
+						</p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp2.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp2fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For the second component, I am testing how the MovingBall class functions
+						as an object that a user can manipulate. The way that I am allowing the
+						user to change the size of the ball that is bouncing is through the width which
+						is occurring as intended. I also set the height that the ball will travel is
+						equal to the height of the box that their mouse travels, which has also been
+						successful. It appears that the issue with this component is that the position
+						that the ball starts has two incorrect positions when the start position is to the right
+						of the end position when drawing from right to  left. When drawing from right to left,
+						if the height is greater than the width, then the position that the ball starts will be
+						a radius away from the centre position. However, when the width is greater than the
+						height, the circle will be a diameter away from the centre position. <br> To fix this
+						issue, when the user is drawing an object from left to right, then the
+						position the circle starts as is this.xMouse-(Math.abs(this.w)/2), whereas
+						when it is the opposite, that total half width is adding to the this.xMouse.</p>
+					</div>
+				</div>
+				<h4>-Component test 3-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp3.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp3fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As seen in the first video, another thing that I had to consider was the
+						speed that the ball was travelling. As I thought it would be a more fun
+						alternative to setting a constant speed, I decided to randomise the speed.
+						While randomising the speed creates a good variety of possibilities for the
+						user. The only issue with this, as shown in the first video, is that while
+						there is a low probability of this occurring, a ball could randomly start to
+						travel exceptionally fast or slow. This could confuse, overwhelm or bore the user,
+						which is why I needed to add in an upper and lower bounds into the random() calculation.
+						<br> As seen in the second video, the balls are travelling at reasonable speeds with some but not
+						extreme variation. I used Math.floor(Math.random() * (250 - 50 + 1) + 50), which
+						set the max speed to be 250 tics and the minimum speed to be 50.</p>
+					</div>
+				</div>
+				<h4>-Component test 4-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp4_v1.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint9_comp4_v2.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>With my bouncing ball, the centre point is where the mouse is released so to have the ball bouncing
+						in the middle of the rectangle I subtracted half the diameter of the circle from the x starting point
+						so the ball would always start in the middle. By adjusting the
+						start position it is fairly simple to have the ball bounce on the inside line of
+						the box space, and as seen in the first video, when the height is greater than
+						the width this works ideally how it should. However, when the width was greater than the height
+						then the ball would be drawn outside the rectangle. This was fixed by subtracting the width
+						from the height of the rectangle and choosing the smaller of the two values meant that the
+						ball was always within the rectangle.
+						While it does not technically work how it should in that video, as the width would be greater,
+						then the ball would not be able to move until the height is greater and there is no way that
+						his could really be changed unless the size was not entirely decided by the width.
+						<br>Because of this, I have chosen to continue with the alternative approach I have been
+						taking throughout the addition of this class. While the ball does surpass the edges
+						of the box, it does it in an understandable and clean sense.</p>
+					</div>
+				</div>
+
+				<h2>Sprint Review</h2>
+				<p>In summary, I am also satisfied with the way that this sprint has progressed, as while
+				there were a few technical errors which occurred, these were resolved in the most
+				ideal way that they could, and remains clear to the user. There were a few times throughout
+				this sprint where there were multiple approaches that I could take in terms of the design
+				and usability. The first decision that I made was that the size of the ball would
+				be determined by the width of the area that the user draws. As discussed above, I believe
+				that this was the best approach to take for my program. Throughout the sprint there
+				were a few errors that occurred in terms of the positioning of the ball, the speed and
+				the sizing. I believe that all issues were effectively resolved through agile processes.
+				The first issue I encountered was how I designed my MovingBall class, where and
+				where the ball would first start and bounce to and was resolved swiftly. Issues to
+				do with different ways of dragging the mouse were also resolved and I had to consider
+				the possibly speeds that the balls could travel at. Lastly, I had another two approaches
+				that I considered, although it proved that there was only truly approvable approach as the
+				other one was not functional enough with the first approach that I chose.</p>
+				<hr>
+
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="S10">Sprint 10</h2>
+				<p><b>Aim:</b> My aim for sprint 10 is to implement a star option for the user. Within
+				the star interactive button, I aim to have multiple secondary buttons which will allow
+				the user to have further customisation around the number of points the star they wish
+				to draw contains.</p>
+
+				<h3>Plan</h3>
+
+				<h4>Sprint ten board</h4>
+				<img class="img-responsive" src="assets/img/sprint10board.png" alt="Sprint 10 kanban">
+				<hr>
+				<h3>Diagram of expected outcome</h3>
+				<img src="assets/img/sprint10diagram.jpg" style="max-width: 40%;" alt="Sprint 10 expected outcome diagram">
+				<hr>
+				<h3>Pseudo-code</h3>
+				<img src="assets/img/pcsprint10.jpg" style="max-width: 40%;" alt="Sprint 10 pseudo code">
+				<h3>Testing</h3>
+				<h4>-Component test 1-</h4>
+				<div class="col-container">
+					<div class="col">
+						<img src="assets/img/sprint10_comp1.png" style="height: 150px;" alt="Possibilities for star design 1">
+						<img src="assets/img/sprint10_comp1-2.png" style="height: 150px;" alt="Possibilities for star design 2">
+						<img src="assets/img/sprint10_comp1-3.png" style="height: 150px;" alt="Possibilities for star design 3">
+					</div>
+					<div class="col">
+						<p>For component one of this sprint, when I was working on the calculations I quickly
+						realised that there was a fair amount of complexity. As I needed to have an inner and outer
+						circle and then calculate the angles between the lines depending on the number of points
+						on the star. Thankfully when I was searching online I found a few examples on Stack Overflow
+						and this example was the easist function to implement into my existing code so exactly like
+						how I implemented the crescent code I also implemented the star code and credited the author
+						including links to where I found it in my code.
+						<br>
+						<a href="https://stackoverflow.com/questions/25837158/how-to-draw-a-star-by-using-canvas-html5">
+						https://stackoverflow.com/questions/25837158/how-to-draw-a-star-by-using-canvas-html5</a>
+						<br>
+						I once again had to find the ratios I preferred visually through comparing the shapes with
+						different amounts of points, inner and outer radius'.</p>
+					</div>
+				</div>
+				<h4>-Component test 2-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp2.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp2fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>For the second component, once I had sorted out the ratios that I wanted
+						to use and believe looked the most aesthetically pleasing or familiar for the
+						user, I moved on to making this shape able to be drawn by the user. Once again,
+						similar to my circle and crescent shapes, a star was drawn from the centre. As
+						demonstrated in this first video, for my first attempt to test how it would
+						be drawn, it is clear that I cannot make the x and y points based off of where
+						the mouse starts (this.xMouseStart and this.yMouseStart), as a star is drawn
+						with cos and sin curves, so the start position is the centre (this.xC and
+						this.yC). The second error with my first attempt was that the radius cannot
+						only be based off of the width, and must be dependent on the smaller value of
+						either the width or height, which follows a similar principle to what I have
+						been following with previous shapes. <br> As shown in the second video for this
+						component, through the aid of an external star function, the implementation
+						of the main purpose of this sprint was fairly clean. Through fixing these
+						two errors using methods I have similarly used in previous sprints, my
+						star button was functional and clear for the user. As well as this, because
+						the function is quite flexible, the design is well future proofed for times
+						I may want an alternative to the star design or number of points. </p>
+					</div>
+				</div>
+				<h4>-Small bug fix-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp3.mov">
+						</video>
+						<img src="assets/img/sprint10_errormsg.png" alt="">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp3fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>As seen in the first video in this test, I noticed that when you click
+						while an object is selected, then that click would be added into the object array.
+						This was clear because if you had clicked, then that click would also need to be removed
+						or re-added to the array. An example of this is shown in the video to the left,
+						where when the user clicks, an empty object is drawn each time the user clicks the
+						screen while a shape option is selected. When I first noticed this, I assumed that
+						it was not an error, and that it was just a small object being drawn. To test if
+						this was true, I printed out the width and height of an object that is being drawn,
+						as shown in the image in the middle. From this test, it is clear that when the
+						user clicked on the screen, then an object with zero dimensions would be drawn
+						(the zero values for width and height were given when I clicked the screen).
+						As something with a width and/or height of zero should not be considered as an object,
+						this is an error that needs to be fixed. This was a simple fix, as I created
+						a loop before an object is drawn with the conditions that the width, height,
+						radiusX and radiusY cannot equal zero. As demonstrated in the last video test,
+						this approach was successful and now objects are no longer drawn if they have no
+						dimensions. </p>
+					</div>
+				</div>
+				<h4>-Small improvement from past sprint component-</h4>
+				<div class="col-container">
+					<div class="col">
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp4.mov">
+						</video>
+						<video class="vids" controls>
+							<source src="assets/vids/sprint10_comp4fix.mov">
+						</video>
+					</div>
+					<div class="col">
+						<p>This is a styling improvement instead of an issue, but it is a relatively
+						small adjustment to improve the clarity for the user. My main concern around
+						the shift options for the rectangle and ellipse, was that it was not fully
+						clear to the user what it meant by this. Especially if younger children
+						or beginner designers may use this program in the future, they may not
+						be familiar with a shift button option. My approach to improve the communication
+						to the user was through changing the text of the rectangle and ellipse to
+						square and circle when the user presses the shift button. As shown in the first
+						video, I first tested if this would work through altering the text of all
+						interactive buttons when the shift key is pressed. As this component was
+						successful, I was able to move onto the second component which is just
+						focusing on the two individual buttons. The way that I individually altered
+						the text of the rectangle and ellipse button was through adding a new variable
+						within the InteractiveButton class, called 'altText'. Through this, I was
+						able to alter the text that is presented to the user on the button if the
+						button has an altText and the shift button is down. By designing the alternative
+						text like this, I am complying the sustainability and future proofing
+						relevant implication because in the future of my program there may be many
+						cases where I will want a button to be able to have a different text
+						depending on unique conditions. As shown in the second video, this small
+						addition to my code was successful, and I believe that it aids in the usability
+						of my program.</p>
+					</div>
+				</div>
+
+				<h2>Sprint Review</h2>
+				<p>In this sprint, the implementation of the star function was successfully and mainly
+				occurred as intended. I am satisfied with the outcome of my program and the way this
+				sprint has progressed. Through a star function that I have found from Stack Overflow,
+					I was able to adapt this function into my code for a star button. It was very useful
+					to find a function that could be applied to a program such as mine, as the process
+					of calculating the output would have been quite difficult. There were a few very minor
+					errors that I have encountered throughout the process of building this code, and so
+					this sprint remained quite clean as these problems were easily resolved. While these
+					were not originally intended to be included within this sprint, I noticed one
+					error that needed addressing and resolving along with one design element that I could
+					improve on. Both of these additional focuses within this sprint also were successful and
+					there were no major unexpected errors that occurred. I believe that this will be my
+				last sprint of this project because I am satisfied with how my project is at and fulfills
+				my intended aim. There is still room where I could expand further in this project, as
+				shown on my project backlog, but the state that my project is at, is an acceptable
+				standard. </p>
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h3>Functionality test</h3>
+				<video class="vids" controls>
+					<source src="assets/vids/functionalitytest.mov">
+				</video>
+				<br>
+				<p>To test the functionality of my program, I decided to run it through Safari to
+				see if there are any differences that may impact the functionality of my program
+				for other users. As seen in the video above, thankfully, my program runs almost
+				entirely identically. There is only one noticeable difference between the two
+				browsers, and that is that instead of the objects drawing from the point of the
+				mouse, in Safari my objects and guides are drawn based off of the centre of the
+				user's mouse. This is only a small detail though, and is not impactful enough
+				to damage the functionality of my program, as users are still able to use my
+				program in a successful way.</p>
+				<hr>
+				<h3>Usability test</h3>
+				<video class="vids" controls>
+					<source src="assets/vids/sasha-test.mov">
+				</video>
+				<br>
+				<p>To test the usability of my program, I asked my younger sister to attempt
+				to use my drawing program for the first time and narrate her experience. This,
+				like the functionality test, is an important process to do because the program
+				designer can miss what an unpredictable user may do. I believe that she quickly
+				got the hang of the program, and I had positive feedback once the test had been
+				completed. While watching what she was doing, if this project was to extend
+				further any further, I could look into creating the undo, redo and clear button
+				into a separate version of button, as then the user could have their object selected
+				remain this way when going to select one of the three buttons. But aside from this,
+				the test was successful.</p>
+				<hr>
+				<h3>Git commit history</h3>
+				<img class="img-responsive" src="assets/img/commit-hist1.png" alt="Git commit history">
+				<img class="img-responsive" src="assets/img/commit-hist2.png" alt="Git commit history">
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+				<h2 id="R">Reflection</h2>
+				<p>Throughout the course of this project, to ensure that it ran effectively and
+					that I produced a high-quality digital technologies' outcome, I used the Agile
+					project management method. To manage and store my project, I have used GitHub
+					as a tool to aid in my keeping to the Agile structure. I have been able to
+					update and expand on my project backlog and individual kanban boards per sprint.
+					In the initial stages of beginning my project, in alignment with the Agile
+					process, the first step that I completed was creating a project backlog. As
+					it has been discussed earlier on this planning document, my project backlog
+					was a crucial first step because it contained all of my compiled sprints
+					that I was intending to complete and abide by throughout the course of my
+					project. If I had not completed this first step in the Agile process,
+					then I would not have had a guide to follow as my project developed, which
+					could have meant that I would not have met my goals and intentions by
+					travelling off course from my endgame. As well as this, through a project
+					backlog I was able to plan a sprint order by priority. If I had not done this,
+					then it could have been tempting to focus on unnecessary parts of my project
+					and lost valuable time that could have been towards the most crucial aspects.
+					From this, each individual sprint also had a kanban board which meant that
+					I could track and follow each component in a sensible manner. Within each
+					sprint I also used planning components in set orders such as pseudocode,
+					general design work such as sketches and natural-language explanations.
+					Through doing this, it ensured that I could have a clear understanding of
+					each part in my development process and future programmers can also be
+					able to gain a comprehensive understanding of my development process.
+					Within each sprint, I thoroughly tested each new addition to my program
+					and then reflected upon these new elements to insightfully determine
+					the next stage in my development process whilst abiding to my original
+					plan. After each completed sprint, I committed the changes that I had made
+					to GitHub, where it can store and even recover historic versions of
+					my programming process in a case where this is needed. There were many
+					things that I learnt throughout following the Agile process, some of
+					which include the importance of extensive testing and planning. There
+					were many times when I was very fortunate to have exact layouts of
+					what I am required to complete and how to stay on track. This process
+					has most definitely enhanced the overall product of my program because
+					decomposing each component, then trialling, and then reflecting, allowed
+					me to notice even the smallest of errors and has taught me how to
+					thoroughly consider different outcomes and possibilities. I believe that
+					the main aim of my program has been achieved through following this
+					Agile process, as I believe and have tested, a child of various ages
+					should be able to enjoy and learn from this program.
+
+				</p>
+				<hr>
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<h2 id="RI">Relevant Implications Summary</h2>
 				<h3><u>Sustainability and future proofing</u></h3>
 				<p>Throughout my program, I have addressed the relevant implication of sustainability and
-					future proofing. This relevant implication is important to consider, as a program
-					should be adaptable and have the ability to expand with new applications and frequent updates.</p>
-				<h3>Usability</h3>
+				future proofing. This relevant implication is important to consider, as a program
+				should be adaptable and have the ability to expand with new features.
+				Throughout the process of designing this program, I actively kept this relevant implication
+				in mind. In the case of a drawing program, working through a button-by-button process
+				for the majority of the time, makes for a program to be easily expanded on. This means
+				that if future developers wish to build new features into the program,
+				each class and/or function is separate and unique to the intended task. Due to this,
+				it has been very easy to implement new components in my code, because each individual
+				button predominantly had its own unique code path so did not impact other function.
+				Beyond this, when designing each new class and/or function, I ensured that I was designing
+				it with the intention or ability to be expanded on. As for just one small example of this
+				within my code, by creating a colour array with a loop to print out each colour string, it is
+				very easy to alter or increase/decrease the colours available. So when I later did include
+				more colour options, this process was very easy. My code has been extensively commented in a clear
+				and understandable way, so anyone else who wants to expand on my project can easily do so. On top
+				of this, all of my variable, function and class names are appropriate and easy to interpret, and
+				each filed document is also clear with the names and placements of items. As well as this, due to
+				my thorough documentation following the Agile process and each sprint being easily accessible on GitHub,
+				future programmers can clearly follow my design process. </p>
+				<h3><u>Usability</u></h3>
 				<p>The relevant implication, usability, is also very important to focus on while
-					building a program. It focuses on the idea that a digital product is able to be
-					understood and properly used for it's desired purpose. That errors can be recognised
-					and recovered from throughout the process, that all information is displayed in
-					a clear way, so the proper requirements of the program is executed in the most efficient way.</p>
-				<h3>Functionality</h3>
+				building a program. It focuses on the idea that a digital product is able to be
+				understood and properly used for it's desired purpose. That errors can be recognised
+				and recovered from throughout the process, that all information is displayed in
+				a clear way, so the proper requirements of the program is executed in the most efficient way.
+				For a program that is solely based on user input, it is crucial to have a good usability
+				to ensure that the process through using this drawing program was effective, intuitive, and able to
+				be understood. Just one example of this in my program, is the placement and colouring of my undo,
+				redo and clear buttons. In the first case, having a red clear button in the right
+				corner of the screen acts as a warning in two senses. The first is because an exit button
+				or a clear, or cancel button is normally placed in the top right-hand corner of the screen.
+				This means that a typical user will subconsciously be familiar with this idea, meaning that
+				it is less likely a user will accidentally select this button. The second is the colour red
+				which is also a clear warning with an association to things such as a stop sign. This was
+				also discussed earlier when I was designing these buttons. Another example of this
+				is the hover over change in colour, especially with the design of my buttons, as the
+				secondary buttons cannot be interacted with until its parent button has been selected.
+				This means that the user has an indication of what buttons they can interact with,
+				before selecting anything. On top of this, the draggable guides give users an indication
+				of what their drawing action will do upon release. The buttons in my program are
+				also designed like conventional buttons, so this should not confuse the user with
+				their purposes. On top of this, I ensured that I did a few personal usability tests,
+				and one video test with a user that was not familiar with my program, to gain
+				a further insight on how the usability of my program could be improved.
+				These are just some of the many examples where I actively considered the
+				usability throughout the design process.</p>
+				<h3><u>Functionality</u></h3>
 				<p>The final relevant implication that I have addressed is functionality. Functionality
-					is about having a digital product that operates correctly, without any errors or
-					crashes. This is also a very important relevant implication to consider while
-					building a program, as if there are many errors and crashes throughout a program,
-					then the desired outcome cannot be reached. A functional program should perform
-					with the expectation of errors and unexpected inputs/outcomes, and have the
-					ability to either prevent or recover from these occurring. Especially when
-					focusing around the input of a user, as mine does, because users cannot be relied
-					upon to not make faults. If a system crashes or does not run with ease, then
-					it's functionality is poor.</p>
+				is about having a digital product that operates correctly, without any errors or
+				crashes. This is also a very important relevant implication to consider while
+				building a program, as if there are many errors throughout a program,
+				then the desired outcome cannot be reached. A functional program should perform
+				with the expectation of errors and unexpected inputs/outcomes, and have the
+				ability to either prevent or recover from these occurring. Especially when
+				focusing around the input of a user, as mine does, because users cannot be relied
+				upon to not use the program in unexpected ways that could generate an error.
+				If a system crashes or does not run with ease, then it's functionality is poor.
+				To ensure the functionality of my program, I have been actively testing my program while following
+				the Agile process. This has been a vital step throughout the development of
+				my code. I can guarantee that without testing and following the Agile process, the functionality
+				of my code would not be at an acceptable standard. Upon the spotting of each error,
+				I either immediately fixed it, or kept a very close eye on the status of the error
+				while focusing on other elements to shortly return to, and improve it. At the stage of
+				my code, there are no instances where my program crashes, and no errors that would
+				impact the functionality of my code. To test the functionality of my code, I ran it
+				through a Javascript code checker to ensure that there are no unwanted errors, and I
+				tested my program in a Safari browser. Both of these tests did not show any
+				concerning signs for the functionality of my program.</p>
 <!--------------------------------------------------------------------------------------------------------------------->
- <hr>
- <hr>
-<!-- Paragraphs -->
-<h3>Example code insert (don't do too much of this)</h3>
-<pre style="font-size: 1.5em;">
-<code class="javscript"> function inBoundsCheck(xM, yM, x, y, w, h){
-        if( xM > x && xM < x+w && yM > y && yM < y+h){
-            return true;
-        }else{
-            return false;
-        }
-    }</code>
-</pre>
- 
-            <hr>
-               
-              
 
-					<!-- Lists -->
-					<h3>Unordered list</h3>
-					<p>Unordered lists are used to markup lists where list items do not require numbering.</p>
-					<ul>
-						<li>Ut wisi enim ad minim veniam</li>
-						<li>Quis nostrud exerci tation</li>
-						<li>Lamcorper suscipit lobortis nis</li>
-						<li>Ut aliquip ex ea commodo consequat</li>
-						<li>Duis autem vel eum iriure dolor</li>
-					</ul>
-					<hr>
-
-					<h3>Ordered list</h3>
-					<p>Ordered lists are used to markup lists where list items require numbering.</p>
-					<ol>
-						<li>Hendrerit in vulputate velit esse</li>
-						<li>Olestie consequat</li>
-						<li>Vel illum dolore eu feugiat</li>
-						<li>Nulla facilisis at vero eros</li>
-						<li>Accumsan et iusto odio</li>
-					</ol>
-					<hr>
-
-					<h3>Unstyled list</h3>
-					<p>You can make the list unstyled using the <code>list-unstyled</code> class.</p>
-					<ul class="list-unstyled">
-						<li>Ut wisi enim ad minim veniam</li>
-						<li>Quis nostrud exerci tation</li>
-						<li>Lamcorper suscipit lobortis nis</li>
-						<li>Ut aliquip ex ea commodo consequat</li>
-						<li>Duis autem vel eum iriure dolor</li>
-					</ul>
-					<hr>
-
-					<h3>Inline list</h3>
-					<p>You can make the list display inline using the <code>list-inline</code> class.</p>
-					<ul class="list-inline">
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
-						<li>Four</li>
-					</ul>
-					<hr>
-
-				
-
-					<h3>Buttons</h3>
-					<p>You can apply the <code>btn</code> class to any element that requires a button style.</p>
-					<p><a href="#" class="btn">Submit</a></p>
-					<hr>
 
 
 
@@ -1038,7 +1617,7 @@ error-proof, which is something very important when dealing with the unexpected 
 			
 			</div>
 			<div class="footer">
-				&copy; Copyright 2015
+				&copy; Copyright 2022
 			</div>
 		</div>
 	</body>
